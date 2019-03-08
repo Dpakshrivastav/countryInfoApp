@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-large bg-light">
-        <a class="navbar-brand" href="#"> country code</a>
+    <nav class="navbar navbar-md navbar-light bg-light">
+        <a class="navbar-brand my-brand text-dark" href="#">Country Guide</a>
     </nav>
     <div class="container mt-5">
-        <div class="jumbotron text-center rounded">
-            <h1>Know about your country</h1>
-            <!-- <form action=""></form> -->
-            <input class="border border-secondary rounded text-center" type="text" name="" id="country" placeholder="Enter your country name"><br>
-            <button class="bg-primary text-center text-white" onclick="showCountry('country')">Get Detail</button>
+        <div class="jumbotron">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <h1>Know about your country</h1>
+                <input type="text" class="text-center col-4" placeholder="Enter your country name" id="countryName"><br>
+                <button class="btn col-2" onclick="getDetails(countryName)">Get Details</button>
+            </div>
         </div>
     </div>
-
-
-
+    <div class="result" id="result">
+    
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
